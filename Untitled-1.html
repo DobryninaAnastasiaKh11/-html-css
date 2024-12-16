@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личная информация :)</title>
+    <link rel="stylesheet" href="Untitled-1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Личная информация :)</h1>
+        <div class="cat-animation">
+            <img src="https://steamuserimages-a.akamaihd.net/ugc/809998067557208548/2A483A94C68E6DD89A5C36ECA6465E927CAA780F/?imw=512&amp;imh=372&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true" alt="Котик" class="cat">
+        </div>
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#about">Я</a></li>
+                <li><a href="#hobbies">Мои хобби</a></li>
+                <li><a href="#favorite-game">Игра, которая покорила меня</a></li>
+                <li><a href="#favorite-series">Любимый фильм</a></li>
+                <li><a href="#extra-info">Еще немного обо мне</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <h2>Я</h2>
+            <p>Привет! Я - Глеб Рябушкин. Я студент курса по HTML/CSS. Это мой первый проект.</p>
+            <img src="https://sun9-47.userapi.com/impg/vCy3vUl5zQrVNO7zpR1_GgG0q_HSd5TB5e5SQA/0hKa21BKTPU.jpg?size=1620x2160&quality=95&sign=2c9f825bd680b24fcc5ebfc7459e634e&type=album" alt="Обо мне">
+            <p>Я люблю узнавать и пробовать что-то новое.</p>
+        </section>
+        
+        <section id="hobbies" class="section">
+            <h2>Мои хобби</h2>
+            <p>Моё основное хобби - кулинария.</p>
+            <img src="https://sun9-31.userapi.com/impg/B98xGc9h5SvMcz6yj0kdgvGiIpL4ntr-pDqoZQ/apP9TzBHhhw.jpg?size=1179x1515&quality=95&sign=3b9a990deeafbf189f844cde744c09a1&type=album" alt="Увлечения">
+            <p>Например, вот холодный салат</p>
+            <p>У меня не всегда получается все с первого раза и так, как я хочу, но я стараюсь, чтобы это исправить и довести до идеала.</p>
+       
+        </section>
+
+        <section id="favorite-game" class="section">
+            <h2>Любимая игра</h2>
+            <p>Это - моя любимая игра. Называется Hollow Knight</p>
+            <img src="https://steamuserimages-a.akamaihd.net/ugc/1631948234953027805/6493640ABF40ED27CC27B4ABBD4F12C652D25253/?imw=512&amp;&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=false" alt="Любимая игра">
+            <p>Эта игра выполнена в стиле сюжетного рогалика. В ней есть обширный и интересный лор, который приятно изучать.</p>
+            <p>По игре создано много теорий, поскольку она имеет множественные сюжетные ответвления.</p>
+            <p>Меня она привлекает своим открытым миром и возможностью делать то, что я захочу.</p>
+        </section>
+        
+        <section id="favorite-series" class="section">
+            <h2>Любимый сериал</h2>
+            <img src="https://m.media-amazon.com/images/M/MV5BNWJiZDQ3NTQtNTBiMi00OTk0LWEzOTUtMTVmOGE1Nzc0YTc0XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg" alt="Любимые сериалы">
+            <p>Я обожаю сериалы о приключениях и детективы. Последний, что посмотрел - "Шерлок".</p>
+        </section>
+        
+        <section id="extra-info" class="section">
+            <h2>Еще немного обо мне</h2>
+            <img src="https://sun9-32.userapi.com/impg/TfBWF5tDHlOQHO5C-IlScXcWlVpBCTC96ifIbw/Wgwia-dujy0.jpg?size=727x983&quality=95&sign=2b757976245615ea6cc12535937c2d2c&type=album" alt="Дополнительная информация">
+            <p>Я всегда открыт к новым знакомствам!</p>
+            <p>Еще я люблю футбол. Эта фотка с сентябрьского матча ФКРостов-Факел</p>
+        </section>
+        
+        <section id="contact" class="section">
+            <h2>Контакты</h2>
+            <img src="https://sun9-53.userapi.com/impg/Udk2HkLI3thhJKqBgahVvAGQtl8HIs1b4ryqQw/5QSCTQfVPH4.jpg?size=1179x1130&quality=95&sign=f83b467ae97d3d279e91b69c34d70a6b&type=album" alt="Контакты">
+            <p>Номер телефона - 8-900-000-00-00</p>
+            <p>Telegram - @example</p>
+            <p>ВК - id_example</p>
+        </section>
+    </main>
+
+    <script>
+        const links = document.querySelectorAll('.sidebar a');
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
